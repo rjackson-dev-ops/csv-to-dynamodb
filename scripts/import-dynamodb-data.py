@@ -33,6 +33,10 @@ def lambda_handler():
    #DictReader is a generator; not stored in memory
    for row in csv.DictReader(codecs.getreader('utf-8')(obj)):
 
+
+# ideas on fixing this issue
+#https://stackoverflow.com/questions/11665628/read-data-from-csv-file-and-transform-from-string-to-correct-data-type-includin
+
       row['QuestionNumber'] = int(row['QuestionNumber'])
       row['NoEnergyImpact'] = int(row['NoEnergyImpact'])
       row['NoWealthImpact'] = int(row['NoWealthImpact'])
